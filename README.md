@@ -23,7 +23,7 @@ pip install pillow
 ### Running the Game
 To run the game, execute the following command in your terminal:
 ```bash
-python alphabet_game.py
+python Alfabets.py
 ```
 Make sure to have your images (e.g., arbuzs.png, apple.png, etc.) in the same directory as the script or update the image paths in the code accordingly.
 
@@ -32,12 +32,6 @@ Make sure to have your images (e.g., arbuzs.png, apple.png, etc.) in the same di
 - **ButtonHandler**: The class that manages the buttons and game logic, including the scoring system.
 - **Image Loading Function**: A function that loads and displays images within the game.
   
-## Example Code
-Here’s a brief example of how to initialize and run the game:
-```python
-liet_celv = Lietcelv()
-liet_celv.run()
-```
 ### Images
 The game uses images of various objects, such as fruits and animals, to help children learn the letters associated with the images. Below is a sample list of image files used in the game:
 - `arbuzs.png`
