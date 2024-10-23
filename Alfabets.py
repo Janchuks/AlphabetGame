@@ -11,7 +11,6 @@ class Lietcelv:
         self.root.minsize(200, 200) 
         self.root.geometry("300x300+50+50")
 
-        # Create Label in our window
                 # Spēles apraksts
         self.text = tk.Label(self.root, text="Spēles apraksts: Spēlētājam tiks parādīta bilde, un viņam būs jāizvēlas pareizais burts no dotajām izvēlēm.",font=("Helvetica", 10, "bold"), justify="left")
         self.text.pack(anchor="w", padx=10)
@@ -38,12 +37,9 @@ class Lietcelv:
 
 liet_celv = Lietcelv()
 liet_celv.run()
-# Define a function to close the Tkinter root window
+
 def close_window():
     root.destroy()
-
-# Create a button to close the window
-
 
 
 class ButtonHandler:
@@ -52,19 +48,15 @@ class ButtonHandler:
 
         self.latvian_letters = ["A", "Ā", "B", "C", "Č", "D", "E", "Ē", "F", "G", "Ģ", "H", "I", "Ī", "J", "K", "Ķ", "L", "Ļ", "M", "N", "Ņ", "O", "P", "R", "S", "Š", "T", "U", "Ū", "V", "Z", "Ž"]
 
-        self.current_index = 0  # Index of the current correct letter
+        self.current_index = 0  
 
         self.cipars = 0
 
-        self.large_font = ("Arial", 12)  # Define large font
+        self.large_font = ("Arial", 12) 
 
         self.create_correct_button()
 
         self.create_incorrect_button()
-
-       
-
-   
 
     def create_correct_button(self):
 
@@ -116,10 +108,8 @@ class ButtonHandler:
         image = load_image(image_path, image_width, image_height)
         # Update the image displayed in the label
         label_image.config(image=image)
-        label_image.image = image  # Keep a reference to the image to prevent garbage collection
+        label_image.image = image 
         
-
-        # Create new buttons for both correct and incorrect options
 
         self.create_incorrect_button()
 
@@ -162,12 +152,11 @@ def load_image(path, width, height):
     img = img.resize((width, height))
     return ImageTk.PhotoImage(img)
 
-# Load your image
 images_paths =["arbuzs.png","apple.png","banans.png","citrons.png","cuska.png","dinazaurs.png",
                "engelis.png","ezelis.png","flamingo.png","galds.png","gitara.png","heli.png","iesnas.png", "iis.png","jura.png","kakis.png",
                "kirbis.png","lacis.png","launs.png","masina.png","nauda.png","nau.png","ozols.png","pele.png","riepa.png","suns.png",
                "sokolode.png","tilts.png","uguns.png","udens.png","vavere.png","zabaks.png","zogs.png"]
-image_path = images_paths[0]  # Select the first image initially
+image_path = images_paths[0]  
 image_width = 300
 image_height = 200
 image = load_image(image_path, image_width, image_height)
@@ -177,11 +166,11 @@ label_image = tk.Label(root, image=image)
 label_image.pack()
 
 # Create a label to display text
-label_text = tk.Label(root, text="Hello, Tkinter!")
+label_text = tk.Label(root, text="Kurš burtiņš atbilst šai bildei?")
 label_text.pack()
 
 button_handler = ButtonHandler(root)
 
 root.geometry("400x400")
-# Start the Tkinter event loop
+
 root.mainloop()
