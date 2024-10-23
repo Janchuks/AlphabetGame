@@ -46,7 +46,7 @@ The game uses images of various objects, such as fruits and animals, to help chi
 - `citrons.png`
 - `cuska.png`
 - `dinazaurs.png`
-- 
+  
 ### Author
 Developed by yours truly - Jana Ozolniece - aka. Janchuks
 
